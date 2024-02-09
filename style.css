@@ -41,7 +41,7 @@ ul
 .section
 {
     background-color: var(--bg-black-900);
-    min-height: 100vh;
+    min-height: 100%;
     display: block;
     padding: 0 35px;
     opacity: 1;
@@ -263,7 +263,7 @@ ul
 /* home */
 .home
 {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     color: var(--text-black-900);
 }
@@ -729,4 +729,54 @@ h3.my-proffession
 {
     height: 50px;
     padding: 0 50px;
+}
+@media(max-width:1199px)
+{
+    .aside
+    {
+        left: -270px;
+    }
+    .main-content
+    {
+        padding-left: 0;
+    }
+    .about .about-content .personal-info.info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+}
+@media(max-width:991px)
+{
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+@media(max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
